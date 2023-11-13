@@ -1,8 +1,6 @@
 .accueil {
   background-color : green;
-}
-.accueilTitre{
-  color: white;
+    color: white;
   display: flexbox;
   align-items: center;
   justify-content: center;
