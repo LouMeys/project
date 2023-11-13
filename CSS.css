@@ -1,7 +1,8 @@
 .accueil {
   background-color : green;
-    color: white;
-  display: flexbox;
+  color: white;
+  width: auto;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
