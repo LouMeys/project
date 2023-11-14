@@ -8,14 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS.css"/>
     <script>
-        function goToPage2(){
-            
-        }
+        // Get the animated div
+        const animatedDiv = document.getElementById('animatedDiv');
+
+        // Add an event listener for the end of the transition
+        animatedDiv.addEventListener('transitionend', () => {
+            // Change to page2.html when the animation is over
+            window.location.href = 'Page 2.html';
+        });
+
+        // Trigger the animation by changing the size of the div
+        setTimeout(() => {
+            animatedDiv.style.width = '100vw';
+            animatedDiv.style.height = '100vh';
+            animatedDiv.style.borderRadius = '100vh';
+        }, 0); // Using a small delay to allow the initial rendering before the animation starts
     </script>
 </head>
-<body class="accueil">
-    <div class="divOfDeath">
-        <h1 class="divOfDeath">Webtoon</h1> 
+<body>
+    <div class="divOfDeath" id="animatedDiv">
+        Webtoon
     </div> 
 
 </body>
