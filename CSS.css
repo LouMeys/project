@@ -9,8 +9,8 @@
 
 h1{
   font-family: rationale;
-  width: inherit;
-  height: inherit;
+  width: auto;
+  height: auto;
   align-items: center;
   justify-content: center;
 }
