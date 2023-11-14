@@ -3,7 +3,7 @@ body {
   color: white;
   margin: 0;
   overflow: hidden;
-  display: flex;
+  display: table-cell;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
@@ -12,9 +12,6 @@ body {
 #animatedDiv {
   width: 100px;
   height: 100px;
-  display: table-cell;
-  align-items: center;
-  justify-content: center;
   background-color: #3498db;
   transition: all 2s ease-in-out;
 }
