@@ -5,11 +5,9 @@
 }
 
 .divOfDeath {
-  width: 5cm;
-  height: fit-content;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-top: auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
