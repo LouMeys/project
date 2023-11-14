@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Corps de site</title>
+        <title>Page2</title>
+        <link rel="stylesheet" href="./CSS.css"/>
     </head>
     <body>
         <div>
             <h1>Présentation</h1>
-                <img src="./images/manon.jpeg"/><img src="./images/lou.jpeg"/><img src="./images/myriam.jpeg"
+                <img class="avatars" src="./images/manon.jpeg"/><img src="./images/lou.jpeg"/><img src="./images/myriam.jpeg"
                 <img/>
         </div>
         <div>
