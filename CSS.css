@@ -12,6 +12,7 @@ body {
 #animatedDiv {
   width: 100px;
   height: 100px;
+  display: table-cell;
   align-items: center;
   justify-content: center;
   background-color: #3498db;
