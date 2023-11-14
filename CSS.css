@@ -1,14 +1,12 @@
 .accueil {
   background-color : green;
   color: white;
-  width: auto;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+ 
 }
 
-.h1 {
-  width: 6em;
+.divOfDeath {
+  width: 5cm;
+  height: fit-content;
   vertical-align: middle;
   margin-left: auto;
   margin-top: auto;
