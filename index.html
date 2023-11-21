@@ -14,11 +14,9 @@
         Webtoon
     </div> 
     <script>
-        document.addEventListener('scroll', function () {
-            // Calculate the new size based on the scroll position
-            const newSize = 800 + window.scrollY * 0.1; // You can adjust the factor for faster/slower expansion
+        document.addEventListener("scroll", function () {
+            const newSize = 800 + window.scrollY * 0.1;
 
-            // Apply the new size to the div
             document.getElementById("animatedDiv").style.width = newSize + "px";
             document.getElementById("animatedDiv").style.height = newSize + "px";
 
