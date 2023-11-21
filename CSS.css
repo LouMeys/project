@@ -10,7 +10,7 @@ body {
   justify-content: center;
 }
 
-#animatedDiv {
+#expandingDiv {
   width: 100px;
   height: 100px;
   align-items: center;

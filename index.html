@@ -10,19 +10,19 @@
 
 </head>
 <body>
-    <div id="animatedDiv">
+    <div id="expandingDiv">
         Webtoon
     </div> 
     <script>
         document.addEventListener("scroll", function () {
             const newSize = 800 + window.scrollY * 0.1;
 
-            document.getElementById("animatedDiv").style.width = newSize + "px";
-            document.getElementById("animatedDiv").style.height = newSize + "px";
+            document.getElementById("expandingDiv").style.width = newSize + "px";
+            document.getElementById("expandingDiv").style.height = newSize + "px";
 
             if(newSize > 1000){
                 window.location = "Page 2.html"
-            }
+            };
         });
     </script>
 
