@@ -3,10 +3,9 @@ body {
   color: white;
   margin: 0;
   overflow: hidden;
-  display: table-cell;
+  display: flex;
   align-items: center;
   justify-content: center;
-  vertical-align: middle;
 }
 
 #animatedDiv {
