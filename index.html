@@ -14,21 +14,18 @@
         Webtoon
     </div> 
     <script>
-        // Get the animated div
-        const animatedDiv = document.getElementById('animatedDiv');
+        document.addEventListener("scroll", function () {
+            // Calculate the new size based on the scroll position
+            const newSize = 800 + window.scrollY * 0.1; // You can adjust the factor for faster/slower expansion
 
-        // Add an event listener for the end of the transition
-        animatedDiv.addEventListener('transitionend', () => {
-            // Change to page2.html when the animation is over
-            window.location.href = 'Page 2.html';
+            // Apply the new size to the div
+            document.getElementById("animatedDiv").style.width = newSize + "px";
+            document.getElementById("animatedDiv").style.height = newSize + "px";
+
+            if(newSize > 1000){
+                window.location = "Page 2.html"
+            }
         });
-
-        // Trigger the animation by changing the size of the div
-        setTimeout(() => {
-            animatedDiv.style.width = '100vw';
-            animatedDiv.style.height = '100vh';
-            animatedDiv.style.borderRadius = '100vh';
-        }, 0); // Using a small delay to allow the initial rendering before the animation starts
     </script>
 
 </body>
