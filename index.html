@@ -68,7 +68,8 @@
                     .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
                     .addTo(controller);
 
-                    if(document.getElementById('animate1').style.width = device-width ){
+                    var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                    if(document.getElementById('animate1').style.width = deviceWidth ){
                         window.location.ref = 'Page 2.html'
                     }
             </script>
