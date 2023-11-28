@@ -7,34 +7,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS.css"/>
+    <link rel="stylesheet" href="https://scrollmagic.io/assets/css/style.css">
+    <link rel="stylesheet" href="https://scrollmagic.io/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://scrollmagic.io/assets/css/examples.css">
+    <script src="https://scrollmagic.io/assets/js/lib/jquery.min.js"></script>
+    <script src="https://scrollmagic.io/assets/js/examples.js"></script>
+    <script src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script src="https://scrollmagic.io/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <style>
+        .expandingDiv {
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            background-color: #3498db;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-out;
+        }
+        .rond {
+            position:fixed; 
+            width: 200px; height: 200px; 
+            border-radius: 200px; 
+            margin: 0; top:50%; left:50%; 
+            transform:translate(-50%, -50%);
+            background-color: deepskyblue;
+        }
+    </style>
 
 </head>
 <body>
-    <div id="expandingDiv">
-        Webtoon
-    </div> 
-    <script>
-        const zoomElement = document.querySelector("#expandingDiv");
-        let zoom = 1;
-        const ZOOM_SPEED = 0.1;
-        
-        document.addEventListener('scroll', function(e){  
-            
-            if(e.deltaY > 0){    
-                if (zoomElement.style.transform >= `scale(5)`) {
-                    window.location = "Page 2.html";
-                }
-                zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;  
-        
-            }else{    
-                if (zoomElement.style.transform == `scale(1)`) {
-                    // console.log("minus");
-                    return false;
-                }
-            }
-        })
-
-    </script>
+    <div style="height: 300px;"></div>
+    <div class="scrollContent">
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller();
+        </script>
+        <section class="demo">
+            <div class="spacer s2"></div>
+            <div id="trigger1" class="spacer s0"></div>
+            <div id="animate1" class="rond" style="">
+                <p>Hello</p>
+            </div>
+            <div class="spacer s2"></div>
+            <script>
+                    // build scene
+                    var scene = new ScrollMagic.Scene({
+                                        triggerElement: "#trigger1"
+                                    })
+                                    .setTween("#animate1", 2.5, {backgroundColor: "green", scale: 10}) // trigger a TweenMax.to tween
+                                    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+                                    .addTo(controller);
+            </script>
+        </section>
+        <div style="height: 500px;"></div>
+        <div class="spacer s_viewport"></div>
+    </div>  
 
 </body>
 </html>
