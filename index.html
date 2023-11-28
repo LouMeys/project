@@ -1,4 +1,6 @@
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +12,16 @@
     <link rel="stylesheet" href="https://scrollmagic.io/assets/css/normalize.css">
     <link rel="stylesheet" href="https://scrollmagic.io/assets/css/examples.css">
     <script src="https://scrollmagic.io/assets/js/lib/jquery.min.js"></script>
-    <script src="https://scrollmagic.io/assets/js/examples.js"></script>
     <script src="https://scrollmagic.io/assets/js/lib/greensock/TweenMax.min.js"></script>
     <script src="https://scrollmagic.io/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-    <script src="https://scrollmagic.io/docs/plugins_debug.addIndicators.js"></script>
+    <script src="https://scrollmagic.io/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <style>
-        body{
+        body {
             background-color: green;
+            margin: 0; /* Remove default margin */
         }
+
         .expandingDiv {
             width: 100px;
             height: 100px;
@@ -30,22 +33,29 @@
             transform: translate(-50%, -50%);
             transition: all 0.3s ease-out;
         }
+
         .rond {
-            position:fixed; 
-            width: 200px; height: 200px; 
-            border-radius: 200px; 
-            margin: 0; top:50%; left:50%; 
-            transform:translate(-50%, -50%);
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: deepskyblue;
-            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        p{
-            font-family: Rationale;
+
+        p {
+            font-family: 'Rationale', sans-serif;
             color: white;
         }
     </style>
 
 </head>
+
 <body>
     <div style="height: 300px;"></div>
     <div class="scrollContent">
@@ -61,21 +71,29 @@
             </div>
             <div class="spacer s2"></div>
             <script>
-                    // build scene
-                    var scene = new ScrollMagic.Scene({
-                        triggerElement: "#trigger1"
+                // build scene
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger1",
+                        duration: 300, // Adjust the duration based on your needs
+                         // Adjust the offset based on your needs
                     })
-                    .setTween("#animate1", 2.5, {backgroundColor: "white", scale: 10}) // trigger a TweenMax.to tween
-                    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+                    .setTween("#animate1", {
+                        backgroundColor: "white",
+                        scale: 10
+                    }) // trigger a TweenMax.to tween
+                    .addIndicators({
+                        name: '1 (duration: 200)'
+                    }) // add indicators (requires plugin)
                     .addTo(controller)
-                    .on('end', function(){
+                    .on('end', function () {
                         window.location.href = 'Page 2.html';
-                    })
+                    });
             </script>
         </section>
         <div style="height: 500px;"></div>
         <div class="spacer s_viewport"></div>
-    </div>  
+    </div>
 
 </body>
+
 </html>
