@@ -69,8 +69,9 @@
                     .addTo(controller);
 
                     var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                    if(document.getElementById('animate1').style.width = deviceWidth ){
-                        window.location.ref = 'Page 2.html'
+                    var deviceHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                    if(document.getElementById('animate1').style.width == deviceWidth && deviceHeight ){
+                        window.location.href = 'Page 2.html'
                     }
             </script>
         </section>
