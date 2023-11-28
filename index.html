@@ -22,8 +22,7 @@
             
             if(e.deltaY > 0){    
                 if (zoomElement.style.transform >= `scale(5)`) {
-                    console.log("now scroll down");
-                    return false;
+                    window.location = "Page 2.html";
                 }
                 zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;  
         
@@ -32,6 +31,7 @@
                     // console.log("minus");
                     return false;
                 }
+            }
 
     </script>
 
