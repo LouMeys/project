@@ -63,20 +63,14 @@
             <script>
                     // build scene
                     var scene = new ScrollMagic.Scene({
-                                        triggerElement: "#trigger1"
+                        triggerElement: "#trigger1"
                     })
                     .setTween("#animate1", 2.5, {backgroundColor: "white", scale: 10}) // trigger a TweenMax.to tween
-                    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-                    .addTo(controller);
-
-                    var animate1 = document.getElementById('animate1');
-                    var animate1Style = window.getComputedStyle(animate1);
-                    var animate1Width = parseInt(animate1Style.width);
-                    var deviceWidth = 1920;
-
-                    if (animate1.style.width >= window.innerWidth) {
+                    .on('end', function(){
                         window.location.href = 'Page 2.html';
-                    }
+                    });
+                    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+                    .addTo(controller)
             </script>
         </section>
         <div style="height: 500px;"></div>
