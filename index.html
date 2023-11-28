@@ -68,10 +68,12 @@
                     .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
                     .addTo(controller);
 
-                    var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                    var deviceHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-                    if(document.getElementById('animate1').style.width == deviceWidth && deviceHeight ){
-                        window.location.href = 'Page 2.html'
+                    var animate1 = document.getElementById('animate1');
+                    var animate1Style = window.getComputedStyle(animate1);
+                    var animate1Width = parseInt(animate1Style.width);
+
+                    if (animate1Width === deviceWidth && deviceHeight) {
+                        window.location.href = 'Page 2.html';
                     }
             </script>
         </section>
