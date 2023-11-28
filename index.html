@@ -14,18 +14,24 @@
         Webtoon
     </div> 
     <script>
-        document.addEventListener("scroll", function () {
-            // Calculate the new size based on the scroll position
-            const newSize = 800 + window.scrollY * 0.1; // You can adjust the factor for faster/slower expansion
-
-            // Apply the new size to the div
-            document.getElementById("expandingDiv").style.width = newSize + "px";
-            document.getElementById("expandingDiv").style.height = newSize + "px";
-
-            if(newSize > 500){
-                window.location = "Page 2.html"
-            }
-        });
+        const zoomElement = document.querySelector("#expandingDiv");
+        let zoom = 1;
+        const ZOOM_SPEED = 0.1;
+        
+        document.addEventListener("scroll", function(e) {  
+            
+            if(e.deltaY > 0){    
+                if (zoomElement.style.transform >= `scale(5)`) {
+                    console.log("now scroll down");
+                    return false;
+                }
+                zoomElement.style.transform = `scale(${zoom += ZOOM_SPEED})`;  
+        
+            }else{    
+                if (zoomElement.style.transform == `scale(1)`) {
+                    // console.log("minus");
+                    return false;
+                }
 
     </script>
 
