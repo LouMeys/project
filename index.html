@@ -54,7 +54,7 @@
         <section class="demo">
             <div class="spacer s2"></div>
             <div id="trigger1" class="spacer s0"></div>
-            <div id="animate1" class="rond" style="">
+            <div id="animate1" class="rond">
                 <p>Webtoon</p>
             </div>
             <div class="spacer s2"></div>
@@ -62,10 +62,14 @@
                     // build scene
                     var scene = new ScrollMagic.Scene({
                                         triggerElement: "#trigger1"
-                                    })
-                                    .setTween("#animate1", 2.5, {backgroundColor: "green", scale: 10}) // trigger a TweenMax.to tween
-                                    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-                                    .addTo(controller);
+                    })
+                    .setTween("#animate1", 2.5, {backgroundColor: "green", scale: 10}) // trigger a TweenMax.to tween
+                    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+                    .addTo(controller);
+
+                    if(document.getElementById('animate1').style.width = device-width ){
+                        window.location.ref = 'Page 2.html'
+                    }
             </script>
         </section>
         <div style="height: 500px;"></div>
