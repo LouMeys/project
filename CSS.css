@@ -1,8 +1,7 @@
 body {
-  margin: 0;
-  padding: 20;
+  margin: 50em, 40em, 70em, 40em;
+  padding: 20em;
   overflow: hidden;
-  align-items: center;
 }
 
 #expandingDiv {
@@ -18,7 +17,10 @@ body {
 }
 
 
-.avatar{
+.avatars{
+  display : inline-flex;
+  align-items: center;
+  column-gap: inherit;
   height: 5cm;
   width: 5cm;
 }
