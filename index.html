@@ -72,10 +72,9 @@
                     var animate1 = document.getElementById('animate1');
                     var animate1Style = window.getComputedStyle(animate1);
                     var animate1Width = parseInt(animate1Style.width);
-                    var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-                    var deviceHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                    var deviceWidth = 1920px;
 
-                    if (animate1Width === deviceWidth && deviceHeight) {
+                    if (animate1.style.width >= deviceWidth) {
                         window.location.href = 'Page 2.html';
                     }
             </script>
