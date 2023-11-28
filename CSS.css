@@ -1,13 +1,8 @@
 body {
-  background-color : green;
-  color: white;
   margin: 0;
-  padding: 0;
-  height: 500vh;
+  padding: 20;
   overflow: hidden;
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 #expandingDiv {
