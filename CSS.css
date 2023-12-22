@@ -1,26 +1,144 @@
 body {
-  margin: 50em, 40em, 70em, 40em;
-  padding: 20em;
-  overflow: hidden;
+  overflow: scroll;
 }
 
-#expandingDiv {
-  width: 100px;
-  height: 100px;
+.EnTete{
+  max-width: 100%;
+  height: auto;
+}
+
+.corpsSite{
+  margin: 5% 10% 20% 10%;
+}
+
+p {
+  font-family: 'Jost', sans-serif;
+  line-height: 1,5;
+}
+
+h1, h2, h3 {
+  font-family: 'Maven Pro', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 2fr;
+  grid-gap: 40 px;
+  margin: 10% 0% 15% 0%;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #3498db;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease-out;
+}
+.wrapper1 {
+  display: flex;
+  flex-direction: column;
+  background-image: url("cadre.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.w1 {
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+.w2{ 
+  padding-top: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 15%;
+  overflow: scroll;
 }
 
+.wrapper2 {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  column-gap: 30px;
+}
+.w3{
+  display: flex;
+  flex-direction: column; 
+  overflow: scroll;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 50px 10% 50px 50px;
+  column-gap: 5%;
+  width: 1000px;
+  height: auto;
+  position:initial;
+}
+.box1{
+  grid-column: 1;
+grid-row-start: 2;
+grid-row-end: 4;
+width: 100%;
+}
+.box2{
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 100%;
+  height: auto;
+}
+
+.w4{
+  display: flex;
+  flex-direction: row; 
+  overflow: scroll;
+  column-gap: 30px;
+}
+
+.w5{
+  display: flex;
+  flex-direction: row; 
+  overflow: scroll;
+  row-gap: 20px; 
+}
 
 .avatars{
-  display : inline-flex;
-  align-items: center;
-  column-gap: inherit;
-  height: 5cm;
-  width: 5cm;
+  margin-top: 100px;
+  height: 200px;
+  width: 200px;
+  position: relative;
+
 }
+
+.parallax-effect {
+  background-image: url("alluvial.svg");
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: 75% 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  max-width: 100%;
+}
+
+.p1{
+  width: 30%;
+  height: auto;
+}
+
+.parallax-effect2 {
+  background-image: url("gephi-lite-export.jpg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-attachment: fixed;
+  background-position: 15% 50%;
+  min-height: 600px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.p2{
+  width: 40%;
+  height: auto;
+  position: relative;
+  top: 0%; left: 60%;
+}
+
+
+
