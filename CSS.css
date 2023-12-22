@@ -35,7 +35,7 @@ h1, h2, h3 {
 .wrapper1 {
   display: flex;
   flex-direction: column;
-  background-image: url("cadre.png");
+  background-image: url("./images/cadre.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -112,7 +112,7 @@ width: 100%;
 }
 
 .parallax-effect {
-  background-image: url("alluvial.svg");
+  background-image: url("./images/alluvial.svg");
   min-height: 600px;
   background-attachment: fixed;
   background-position: 75% 50%;
@@ -127,7 +127,7 @@ width: 100%;
 }
 
 .parallax-effect2 {
-  background-image: url("gephi-lite-export.jpg");
+  background-image: url("./images/gephi-lite-export.jpg");
   background-repeat: no-repeat;
   background-size: 50%;
   background-attachment: fixed;
