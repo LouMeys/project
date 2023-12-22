@@ -5,6 +5,7 @@ body {
 .EnTete{
   max-width: 100%;
   height: auto;
+  margin: 0px 0px 0px 0px;
 }
 
 .corpsSite{
@@ -92,6 +93,7 @@ width: 100%;
   flex-direction: row; 
   overflow: scroll;
   column-gap: 30px;
+  margin-bottom: 100px;
 }
 
 .w5{
@@ -130,7 +132,9 @@ width: 100%;
   background-size: 50%;
   background-attachment: fixed;
   background-position: 15% 50%;
-  min-height: 600px; /* Ajustez la hauteur selon vos besoins */
+  min-height: 600px;
+  margin-bottom: 150px; 
+  margin-top: 80px;
 }
 
 .p2{
@@ -139,6 +143,7 @@ width: 100%;
   position: relative;
   top: 0%; left: 60%;
 }
+
 
 
 
